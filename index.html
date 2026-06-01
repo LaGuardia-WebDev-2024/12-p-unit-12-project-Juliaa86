@@ -1,12 +1,12 @@
 <!-- Unit 12 Project
 Requirements
 [yes  ] Two Interactive Drop-down Inputs 
-[  ] Standard Animation
+[  yes] Standard Animation
 [  ] Custom Animation
-[  ] Include Three Images
+[ yes ] Include Three Images
 
 Select ONE Additional Feature to Add  
-[ no ] Feature 1 - Google Font
+[ yes ] Feature 1 - Google Font
 [ no ] Feature 2 - Chain jQuery Methods
 [ no ] Feature 3 - .mouseover() & .mouseOut() Methods
 [ no ] Feature 4 - :hover Feature 
@@ -19,6 +19,9 @@ Select ONE Additional Feature to Add
     <meta charset="utf-8" />
     <title>Unit 12 Project</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap" rel="stylesheet">
   </head>
   <body>
     <h1>Quiz About Me!!</h1>
@@ -38,6 +41,7 @@ Select ONE Additional Feature to Add
     </form>
     <div id="movie-result">
       <p id="movie-text"></p>
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf2GgAMsggLGv0rM1hDNvGKaJu2SzjSVtyxw&s"> 
     </div>
     <hr />
     <!-- Book Question -->
@@ -56,6 +60,8 @@ Select ONE Additional Feature to Add
     <div id="book-result">
       <p id="book-text"></p>
     </div>
+    <button id="button1">Button #1</button>
+    <button id="button2">Button #2</button>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       
@@ -67,10 +73,10 @@ Select ONE Additional Feature to Add
         var answer = $answer.val();
 
         if (answer === "Rapunzel") {
-          $("#movie-text").text("YESSS!!!");
-        } 
+          $("#movie-text").html("YESSS!!!<br><img src=\"https://thedisneywoman.wordpress.com/wp-content/uploads/2015/11/rapunzel-adorable-dorky-thing.jpg\" alt=\"Rapunzel\"> ");
+        }
         else {
-          $("#movie-text").text("Try Again!");
+          $("#movie-text").html("Try Again!<br><img src=\"https://preview.redd.it/how-would-you-distinguish-snow-white-cinderella-and-aurora-v0-gxt7a8cj6nmd1.jpg?width=388&format=pjpg&auto=webp&s=f41647aaacc619c96d47fc5bb075042dc7e878f7\" alt=\"Try Again\">");
         }
       });
 
@@ -88,7 +94,20 @@ Select ONE Additional Feature to Add
           $("#book-text").text("Try Again!");
         }
       });
+
+ $("#button1").click(function () {
+        $("#mem2").css("color", "blue");
+        $("#mem2").text("Stage Management");
+         $("#SM").text("I love being apart of Stage Management during a show and geting to know the cast and crew. I have meet so many amazing people this year by working on West Side Story and Urinetown");
+      $(".Movie2").css('width','300px').show(2000);
+       $("html").css("background-color","rgb(250, 197, 198)")
+       });
       
+        $("#button2").click(function () {
+     $("#button2").animate({
+        width: "60px",
+        height: "60px"
+       }, 3000)
     </script>
   </body>
 
